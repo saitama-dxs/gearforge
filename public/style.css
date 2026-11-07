@@ -1,0 +1,93 @@
+/* GearForge — 精錬所テーマ */
+:root{--bg:#0d0b0a;--iron:#1b1816;--card:#201c19;--fg:#efe6d6;--mute:#a0937f;--ember:#ff8a2a;--gold:#d9a441;--line:#3a302a;--hot:#ff5a1f}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);font:15px/1.65 "Noto Serif JP","Hiragino Mincho ProN",Georgia,serif;
+  background:
+    radial-gradient(900px 400px at 50% 110%, rgba(255,120,40,.25), transparent 60%),
+    radial-gradient(2px 2px at 20% 30%, rgba(255,200,120,.12), transparent 60%),
+    radial-gradient(2px 2px at 70% 60%, rgba(255,200,120,.10), transparent 60%),
+    linear-gradient(#141110,#0d0b0a)}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:2px solid var(--line);
+  background:linear-gradient(#262120,#1b1816);box-shadow:0 2px 0 #000}
+h1{font-size:20px;margin:0;letter-spacing:.2em;color:var(--gold);text-shadow:0 0 12px rgba(255,138,42,.35)}
+h1::before{content:"⚒ ";color:var(--ember)}
+h2{font-size:18px;margin:0 0 12px;letter-spacing:.08em;border-left:4px solid var(--ember);padding-left:10px}
+.proj{display:flex;gap:8px}
+select,input,textarea{background:#15110f;color:var(--fg);border:1px solid var(--line);border-radius:4px;padding:7px 10px;font:inherit;font-size:14px}
+textarea{width:100%;min-height:60px}
+button{background:linear-gradient(#ff9a3c,#d9611a);color:#1a0d05;border:1px solid #8a3a0e;border-radius:4px;padding:9px 18px;font:inherit;font-weight:700;letter-spacing:.06em;cursor:pointer;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 14px rgba(255,120,40,.25)}
+button:hover{filter:brightness(1.08)}
+button.ghost{background:#2a2420;color:var(--fg);border:1px solid var(--line);box-shadow:none}
+button:disabled{opacity:.35;cursor:default;box-shadow:none}
+nav{display:flex;gap:0;padding:14px 20px 4px}
+nav span{flex:1;text-align:center;padding:8px 6px;background:#17130f;color:var(--mute);font-size:13px;letter-spacing:.08em;border:1px solid var(--line);border-right:0;position:relative}
+nav span:first-child{border-radius:4px 0 0 4px}nav span:last-child{border-right:1px solid var(--line);border-radius:0 4px 4px 0}
+nav span.done{color:var(--gold)}nav span.done::before{content:"✔ ";font-size:11px}
+nav span.on{background:linear-gradient(#5a2a0f,#3a1a08);color:#ffd9b0;font-weight:700;box-shadow:inset 0 0 18px rgba(255,120,40,.35);border-color:#8a3a0e}
+main{padding:10px 20px 70px;max-width:1100px}
+.card{background:linear-gradient(#241f1b,#1c1815);border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:14px;box-shadow:0 8px 24px #000a,inset 0 1px 0 rgba(255,255,255,.04)}
+.hero{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);margin:4px 0 14px;display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.grid .item{border:2px solid var(--line);border-radius:6px;overflow:hidden;cursor:pointer;background:#000;transition:transform .12s,border-color .12s}
+.grid .item:hover{transform:translateY(-2px);border-color:#6a4a2a}
+.grid .item.sel{border-color:var(--ember);box-shadow:0 0 18px rgba(255,138,42,.45)}
+.grid img,.grid model-viewer{width:100%;height:200px;object-fit:contain;display:block;background:radial-gradient(#1a1512,#0a0807)}
+.grid .cap{padding:6px 8px;font-size:12px;color:var(--mute);letter-spacing:.05em}
+.fields{display:grid;grid-template-columns:120px 1fr;gap:8px 12px;align-items:center}.fields label{color:var(--gold);font-size:13px;letter-spacing:.1em}
+.row{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}.tabs button{flex:1}
+.hint{color:var(--mute);font-size:13px}.hidden{display:none}
+aside{position:fixed;right:20px;bottom:70px;width:min(540px,90vw);background:#1c1612;border:2px solid var(--ember);border-radius:6px;padding:16px;box-shadow:0 0 30px rgba(255,120,40,.35),0 10px 40px #000}
+aside h3{margin:0 0 6px;color:var(--gold);letter-spacing:.1em}
+aside pre{background:#0a0807;color:#ffd9b0;padding:10px;border-radius:4px;white-space:pre-wrap;user-select:all;border:1px dashed #5a3a1a;font-family:ui-monospace,monospace}
+footer{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:8px 20px;border-top:2px solid var(--line);background:#120f0d;font-size:13px;color:var(--mute)}
+footer a{color:var(--gold)}footer details{max-width:50%}footer ul{max-height:200px;overflow:auto;margin:6px 0 0;padding-left:18px;font-size:12px;font-family:ui-monospace,monospace}
+.big model-viewer{width:100%;height:420px;background:radial-gradient(#1a1512,#0a0807);border-radius:6px}
+/* Forged iron, aged brass and the warm light of the furnace. */
+:root{--bg:#101211;--iron:#1b1e1c;--card:#202320;--fg:#eee8da;--mute:#aaa99b;--ember:#eaa14b;--gold:#d1b078;--line:#42453b;--hot:#ef783b}
+body{min-height:100vh;font-family:"Yu Gothic UI","Meiryo",sans-serif;background:radial-gradient(ellipse at 85% 12%,#66402330,transparent 46%),repeating-linear-gradient(115deg,#ffffff02 0 1px,transparent 1px 5px),#111412}
+header{padding:22px max(28px,calc((100vw - 1200px)/2));background:#151916eF;border-bottom:1px solid #776344;gap:24px;box-shadow:0 3px 24px #0005}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--gold)}
+.brand-mark{display:grid;place-items:center;width:48px;height:48px;font-size:30px;border:1px solid #85704b;background:linear-gradient(135deg,#33372e,#171b18);box-shadow:inset 0 0 0 4px #171b18;transform:rotate(-3deg)}
+h1{font-family:Georgia,serif;font-size:28px;letter-spacing:.06em;color:#ead7ac;text-shadow:none;line-height:1.2}h1::before{content:none}.brand-sub{font-size:9px;letter-spacing:.2em;color:#b3a283}.proj{align-items:center;flex-wrap:wrap}.project-label{font-size:11px;color:var(--mute)}
+.forge-banner{max-width:1200px;min-height:278px;margin:30px auto 24px;position:relative;overflow:hidden;border:1px solid #5d533c;background:radial-gradient(ellipse at 78% 95%,#a4471c50,transparent 50%),linear-gradient(115deg,#272c24,#151a17);box-shadow:inset 0 0 0 6px #111612,0 16px 40px #0004}
+.forge-banner::after{content:"";position:absolute;inset:12px;border:1px solid #a78a4930;pointer-events:none}.forge-copy{position:relative;z-index:1;padding:36px 42px;width:58%;background:linear-gradient(90deg,#20261ff0 75%,transparent)}.eyebrow{font-size:10px;letter-spacing:.25em;color:var(--gold);margin:0 0 15px}.forge-copy h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;border:0;padding:0;font-size:36px;font-weight:600;letter-spacing:.12em;margin:0 0 12px}.forge-copy>p:not(.eyebrow){font-size:13px;line-height:1.9;color:#b9bbae}.forge-tag{display:inline-block;margin-top:8px;font-size:9px;letter-spacing:.2em;color:#cbaa70}.forge-banner img{position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;mix-blend-mode:screen}
+.workflow-label{max-width:1200px;margin:0 auto 10px;display:flex;justify-content:space-between;color:#b2a48b;font-size:11px;letter-spacing:.15em}.workflow-label span:last-child{font-size:9px;color:#838b7e}nav{max-width:1200px;margin:0 auto;padding:0 0 25px;gap:7px}nav span{border:1px solid var(--line);background:linear-gradient(#252a24,#1b201b);padding:13px 6px;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:2px!important;font-size:13px}nav span:last-child{border-right:1px solid var(--line)}nav span b{font:11px Georgia,serif;opacity:.6}nav span.on{background:linear-gradient(110deg,#675233,#413a27);border-color:#b3965c;color:#f7e4bc;box-shadow:inset 0 -2px #d3a559,0 4px 20px #0003}nav span.done::before{content:none}
+main{max-width:1200px;margin:auto;padding:0 0 32px;min-height:280px}.card{position:relative;background:linear-gradient(115deg,#252a24,#1c211d);border:1px solid #484c40;border-radius:3px;padding:28px 32px;box-shadow:0 12px 35px #0003,inset 0 1px #ffffff06}.card::before,.card::after{content:"";position:absolute;top:10px;width:4px;height:4px;border-radius:50%;background:#92805d;box-shadow:0 1px 2px #000}.card::before{left:10px}.card::after{right:10px}h2{font-family:"Yu Mincho",serif;font-size:20px;border:0;padding:0;color:#e3d6b8;letter-spacing:.08em}.hint{color:#b0b4a6;line-height:1.8}select,input,textarea{background:#121812;border-color:#4b5142;border-radius:2px;padding:10px 12px;font-family:inherit}textarea{min-height:80px;resize:vertical}button{font-family:inherit;background:linear-gradient(#dfb56e,#ba8847);color:#211c12;border:1px solid #e2bc77;border-radius:2px;box-shadow:inset 0 1px #ffe1a5,0 3px 12px #0004;font-size:13px;padding:11px 19px;transition:filter .15s,transform .15s}button:hover:not(:disabled){transform:translateY(-1px)}button.ghost{background:linear-gradient(#30372d,#242b23);border-color:#535b49;color:#d5d7c7}button:disabled{opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #f3c57b;outline-offset:4px}.tabs{border-bottom:1px solid #454a3e;padding-bottom:18px;margin:18px 0}.tabs button{box-shadow:none}.fields{grid-template-columns:125px minmax(0,1fr);gap:14px}.fields label{color:#b9ad8c;font-size:12px}.row{gap:12px;margin-top:20px}input[type=file]{width:100%;padding:24px;border:1px dashed #73755b;background:#171d16}input[type=file]::file-selector-button{padding:9px 15px;background:#323c2d;border:1px solid #657052;color:#e0ddcc;margin-right:15px;border-radius:2px;cursor:pointer}.grid .item{background:#151a15;border-color:#464e3d;border-radius:2px}.grid .item.sel{border-color:#dcaf63;box-shadow:0 0 0 2px #dcaf6330}.grid .cap{background:#222a20;padding:10px;color:#bbbfae}.grid img,.grid model-viewer,.big model-viewer{background:radial-gradient(#363d31,#101610)}a{color:#e1bc78}aside{z-index:10;bottom:80px;background:#20271e;border:1px solid #ceaa66;box-shadow:0 20px 70px #000b;border-radius:3px;padding:24px;max-height:75vh;overflow:auto}aside pre{background:#10160f;border-color:#665b3e}footer{position:relative;border-top:1px solid #424b39;background:#141a13;padding:18px max(28px,calc((100vw - 1200px)/2));gap:20px;font-size:11px}footer details{flex-shrink:0}summary{cursor:pointer;color:#d1ba8b}.empty-state{text-align:center;padding:36px}.empty-state p{color:var(--mute)}
+@media(min-width:1500px){.forge-banner{margin-top:40px}}
+@media(max-width:1260px){.forge-banner,.workflow-label,nav,main{margin-left:24px;margin-right:24px}}
+@media(max-width:700px){header{padding:18px;align-items:flex-start;flex-direction:column;gap:18px}.proj{width:100%;gap:8px}.project-label{display:none}.proj select{flex:1;min-width:0}.forge-banner{margin:20px 16px;min-height:235px}.forge-copy{padding:28px 22px;width:100%;background:linear-gradient(90deg,#20261ff5 35%,#20261f70)}.forge-copy h2{font-size:28px}.forge-copy>p:not(.eyebrow){font-size:12px}.forge-banner img{width:65%;opacity:.45}.workflow-label,nav,main{margin-left:16px;margin-right:16px}nav{gap:4px;padding-bottom:18px}nav span{flex-direction:column;gap:3px;font-size:11px;padding:9px 2px}.card{padding:23px 18px}.tabs{gap:6px}.tabs button{padding:10px 5px;font-size:11px;letter-spacing:0}.fields{grid-template-columns:1fr;gap:6px}.fields label{margin-top:8px}.grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}footer{padding:16px;align-items:flex-start;flex-direction:column;gap:12px}footer details{max-width:100%}aside{right:16px;bottom:20px;width:calc(100% - 32px)}.row>button{max-width:100%}input[type=file]{padding:16px 10px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.hidden{display:none!important}
+/* The entrance and the workbench are separate routes. */
+body[data-page=home] .proj,body[data-page=home] .work-heading,body[data-page=home] .workflow-label,body[data-page=home] #steps,body[data-page=home] #view,body[data-page=home] footer details{display:none}
+body[data-page=work] .forge-banner,body[data-page=work] #home{display:none}
+.home-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:32px 0 24px}.home-heading h2{font-size:25px}.project-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}.project-entry{display:block;text-decoration:none;padding:25px;background:linear-gradient(125deg,#2a3027,#1a201b);border:1px solid #505642;border-top:2px solid #958052;box-shadow:0 8px 25px #0003;transition:border-color .15s,transform .15s}.project-entry:hover{border-color:#d1b078;transform:translateY(-2px)}.project-entry h3{color:var(--fg);font-size:21px;font-weight:500;margin:10px 0 24px;overflow-wrap:anywhere}.work-heading{max-width:1200px;margin:30px auto 24px}.work-heading>a{font-size:12px;text-decoration:none;color:var(--mute)}.work-heading h2{font-size:28px;margin:16px 0 4px;overflow-wrap:anywhere}.work-heading p{margin:0}#home{min-height:280px}body[data-page=work] #view{min-height:400px}
+@media(max-width:1260px){.work-heading{margin-left:24px;margin-right:24px}}
+@media(max-width:700px){.home-heading{align-items:flex-start;flex-direction:column;gap:12px;margin-top:26px}.work-heading{margin:24px 16px}.project-list{grid-template-columns:1fr}.work-heading h2{font-size:24px}}
+/* Compact entry: product identity and the first action are visible together. */
+header{min-height:64px;padding:10px max(24px,calc((100vw - 1200px)/2));gap:24px;justify-content:flex-start}.brand{gap:10px;flex-shrink:0}.brand-mark{width:34px;height:34px;font-size:23px}h1{font-size:23px;line-height:1.1}.brand-sub{font-size:9px;letter-spacing:.12em}.engine-label{display:flex;align-items:center;gap:12px;border-left:1px solid #5d604d;padding-left:24px;line-height:1.4}.engine-label strong{color:#e5c58a;font-size:16px;white-space:nowrap}.engine-label span{font-size:11px;color:#bfc3b5}.proj{margin-left:auto}.proj button,.proj select{padding:7px 10px;font-size:12px}.forge-banner{min-height:0;margin-top:20px;margin-bottom:20px;display:grid;grid-template-columns:1.6fr 1fr;background:#20261f}.forge-copy{padding:23px 28px;width:auto;background:none}.forge-copy .eyebrow{margin:0 0 8px;font-size:9px}.forge-copy h2{font-size:26px;letter-spacing:.03em;margin:0 0 8px}.forge-copy>p:not(.eyebrow){font-size:12px;margin:0 0 14px}.forge-copy button{padding:10px 20px}.forge-copy .start-guide{font-size:11px!important;margin:14px 0 0!important;color:#c0b898!important;line-height:1.5}.start-guide span{padding:0 6px;color:#827d67}.forge-banner img{position:absolute;right:0;top:0;width:38.5%;height:100%;object-fit:cover;object-position:center;mix-blend-mode:normal;opacity:1;mask-image:linear-gradient(90deg,transparent,#000 12%)}.image-caption{position:absolute;bottom:14px;right:20px;font-size:9px;color:#ddd3bf;background:#16160eb0;padding:2px 6px;z-index:1}.home-heading{margin:22px 0 16px}.home-heading h2{font-size:21px;margin-bottom:5px}.home-heading .hint{margin:0;font-size:12px}.project-entry{padding:20px}.project-entry h3{margin-bottom:16px}body[data-page=work] .engine-label span{display:none}
+@media(max-width:1000px){header{gap:15px}.engine-label{padding-left:15px;gap:8px;flex-wrap:wrap}.engine-label span{font-size:10px}.project-label{display:none}.forge-copy h2{font-size:23px}}
+@media(max-width:700px){header{padding:10px 16px;flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px 16px}.brand-mark{width:30px;height:30px;font-size:21px}h1{font-size:20px}.engine-label{flex:1;gap:1px;flex-direction:column;align-items:flex-start;padding-left:14px}.engine-label strong{font-size:14px}.engine-label span{font-size:9px}.proj{width:100%;margin:0}.forge-banner{display:block;margin-top:14px;margin-bottom:16px}.forge-copy{padding:20px 18px;background:linear-gradient(90deg,#20261ff5 45%,#20261fb8);width:100%}.forge-copy h2{font-size:22px;max-width:300px}.forge-copy>p:not(.eyebrow){max-width:290px}.forge-banner img{width:55%;opacity:.65;mask-image:none;z-index:0}.forge-copy{z-index:1}.forge-copy .start-guide{font-size:10px!important;max-width:none;letter-spacing:-.03em}.start-guide span{padding:0 2px}.image-caption{display:none}.home-heading{margin-top:20px;gap:0}}
+.project-entry{position:relative;padding:0;overflow:hidden}.project-open{display:block;text-decoration:none;padding:20px 20px 55px}.delete-project{position:absolute;bottom:14px;right:14px;padding:5px 12px!important;font-size:11px!important;color:#d2a69a!important}.delete-project:hover{border-color:#c58f7e!important}.trash-panel{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}.trash-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}.trash-row span{overflow-wrap:anywhere}.trash-row button{padding:6px 14px}#projectNotice:empty{display:none}#projectNotice{color:var(--gold);font-size:13px}
+.world-pick .hint{grid-column:1/-1;margin:0;font-size:12px}.world-pick code{color:#d8c79c}
+label.filebtn{display:inline-flex;align-items:center;background:linear-gradient(#30372d,#242b23);border:1px solid #535b49;color:#d5d7c7;border-radius:2px;font-size:13px;padding:11px 19px;cursor:pointer}
+label.filebtn:hover{filter:brightness(1.1)}
+.export-row{align-items:center;flex-wrap:wrap}.export-row label{display:inline-flex;gap:6px;align-items:center}.export-row input[type=checkbox]{width:auto;padding:0}
+
+/* 作業画面：ヘッダー・群れの名前・工程はスクロールしても上に残す */
+#topbar{position:sticky;top:0;z-index:20;background:#111412f5;box-shadow:0 6px 20px #0007}
+#topbar header{box-shadow:none}
+body[data-page=work] .work-heading{display:flex;align-items:center;gap:6px 16px;flex-wrap:wrap;margin:10px auto 8px}
+body[data-page=work] .work-heading h2{font-size:20px;margin:0}
+body[data-page=work] .work-heading>a{order:3;margin-left:auto}
+body[data-page=work] #steps{padding-bottom:10px}
+body[data-page=work] #steps span{padding:7px 4px}
+body[data-page=work] #view{padding-top:14px}
+/* 設定済みの群れは1行の要約にする */
+.setup-sum{display:flex;align-items:center;gap:10px 28px;flex-wrap:wrap}
+.setup-sum h2{margin:0}.setup-sum span{font-size:13px;color:var(--mute)}.setup-sum span b{color:#b9ad8c;font-weight:400;margin-right:8px}
+.setup-sum button{margin-left:auto;padding:7px 14px}
+.card.compact{padding:14px 32px}
+@media(max-width:1260px){body[data-page=work] .work-heading{margin-left:24px;margin-right:24px}}
+@media(max-width:700px){body[data-page=work] .work-heading{margin:8px 16px 6px}body[data-page=work] .work-heading h2{font-size:17px}body[data-page=work] #steps{padding-bottom:8px}body[data-page=work] #steps span{padding:5px 1px;font-size:10px}body[data-page=work] .work-heading>a{order:0;margin:0;width:100%}.card.compact{padding:12px 18px}.setup-sum button{margin-left:0}}

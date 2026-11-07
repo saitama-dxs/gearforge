@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/saitama-dxs/forge-core/world.schema.json",
+  "title": "Forge series world.json",
+  "description": "シリーズ全キットが共有する世界設定。時代・テイスト・画風・頭身は catalog.json の id/label を参照し、展開は catalog 側に置く。",
+  "type": "object",
+  "required": ["version", "id", "title", "era", "taste", "artStyle"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,47}$" },
+    "title": { "type": "string", "maxLength": 40 },
+    "summary": { "type": "string", "maxLength": 200, "description": "世界の要約。1〜3行。エージェントが読むので短く" },
+    "era": { "type": "string", "description": "catalog.eras[].id" },
+    "taste": { "type": "string", "description": "catalog.tastes[].label" },
+    "artStyle": { "type": "string", "description": "catalog.artStyles[].id" },
+    "proportion": { "type": "string", "description": "catalog.proportions[].id（人・魔物キットで使用）", "default": "standard" },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base":   { "type": "array", "maxItems": 4, "items": { "$ref": "#/$defs/color" } },
+        "accent": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/color" } },
+        "avoid":  { "type": "array", "maxItems": 4, "items": { "type": "string", "description": "英語。例: neon colors" } }
+      }
+    },
+    "motifs": { "type": "array", "maxItems": 5, "items": { "type": "string" }, "description": "世界共通の意匠（英語）。例: wolf crest, runic engravings" },
+    "seed": { "type": "integer", "minimum": 0, "description": "画像・3D生成で共通に使う基準シード" }
+  },
+  "$defs": {
+    "color": {
+      "type": "object",
+      "required": ["en"],
+      "additionalProperties": false,
+      "properties": {
+        "ja": { "type": "string" },
+        "en": { "type": "string", "description": "プロンプトに入る色名" },
+        "hex": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+      }
+    }
+  }
+}

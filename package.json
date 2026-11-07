@@ -1,0 +1,13 @@
+{
+  "name": "gearforge",
+  "version": "0.1.0",
+  "description": "GearForge: 参考画像・種別・ひとことから武器・防具・アイテムの3Dモデルを鍛えるAIエージェント協働キット (powered by Tripo)",
+  "type": "module",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "start": "node server.mjs",
+    "project": "node scripts/project.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

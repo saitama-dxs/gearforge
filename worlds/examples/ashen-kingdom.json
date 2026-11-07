@@ -1,0 +1,23 @@
+{
+  "$schema": "../world.schema.json",
+  "version": 1,
+  "id": "ashen-kingdom",
+  "title": "灰の王国",
+  "summary": "火山灰に覆われた北方の王国。騎士団は黒鉄の装備に狼の紋章を掲げ、民は琥珀色の灯りで暮らす。",
+  "era": "fantasy",
+  "taste": "ダーク",
+  "artStyle": "hand-painted",
+  "proportion": "standard",
+  "palette": {
+    "base": [
+      { "ja": "黒鉄", "en": "blackened iron", "hex": "#2B2B2E" },
+      { "ja": "灰色", "en": "ash gray", "hex": "#8A8580" }
+    ],
+    "accent": [
+      { "ja": "琥珀", "en": "amber", "hex": "#E09A2C" }
+    ],
+    "avoid": ["neon colors", "pastel colors"]
+  },
+  "motifs": ["wolf crest", "ember-like glowing cracks"],
+  "seed": 4207
+}

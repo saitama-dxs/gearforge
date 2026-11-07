@@ -1,0 +1,15 @@
+node_modules/
+projects/
+tmp/
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# 世界設定はユーザーのもの（例とスキーマだけ同梱）
+worlds/*.json
+!worlds/world.schema.json

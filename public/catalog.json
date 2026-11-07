@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "coreVersion": "0.3.0",
+  "categories": [
+    { "id": "weapon", "label": "武器",
+      "types": ["片手剣","大剣","刀","短剣","斧","槍","ハンマー","メイス","弓","クロスボウ","拳銃","ライフル","ショットガン","杖","ロッド","魔導書","薙刀","手裏剣","その他（補足に書く）"] },
+    { "id": "armor", "label": "防具",
+      "types": ["兜","胸当て","肩当て","籠手","脚甲","盾","マント留め","その他（補足に書く）"],
+      "note": "単体で置物として成立する形を優先。着装時の整合は将来対応" },
+    { "id": "item", "label": "アイテム",
+      "types": ["ポーション","宝箱","鍵","巻物","お守り","指輪","ランタン","通信機","ドローン","バッグ","その他（補足に書く）"],
+      "note": "手に持てる大きさ・単一メッシュ" }
+  ],
+  "eras": [
+    { "id": "fantasy", "label": "剣と魔法", "hint": "中世〜架空。魔力・紋章・神話", "en": "high fantasy medieval" },
+    { "id": "modern",  "label": "現代",     "hint": "実在する素材と工法。ポリマー・鋼・刻印", "en": "contemporary real-world" },
+    { "id": "future",  "label": "未来",     "hint": "合金・発光・エネルギー。重力や物理の誇張OK", "en": "futuristic sci-fi" }
+  ],
+  "tastes": [
+    { "label": "王道",              "mood": "気品、正統派",         "material": "鋼＋金、宝石、紋章",                   "eras": ["fantasy"],                    "en": "noble classic heroic" },
+    { "label": "ダーク",            "mood": "暗い色調、重厚、不穏", "material": "黒鉄、荒れた表面、棘・骨・ゴシック装飾", "eras": ["fantasy","future"],           "en": "dark grim gothic" },
+    { "label": "和風",              "mood": "静謐、職人的",         "material": "鋼、漆、鮫皮、組紐、家紋",             "eras": ["fantasy","modern"],           "en": "traditional Japanese craftsmanship" },
+    { "label": "中華風",            "mood": "華麗、流麗",           "material": "赤と金、龍・雲文、房飾り",             "eras": ["fantasy"],                    "en": "ornate Chinese wuxia" },
+    { "label": "北欧・ヴァイキング", "mood": "粗野、力強い",         "material": "鉄、木、革、ルーン、結び目文様",       "eras": ["fantasy"],                    "en": "rugged Norse viking" },
+    { "label": "スチームパンク",    "mood": "工業的、温かみ",       "material": "真鍮、銅、歯車、リベット、革",         "eras": ["fantasy","modern"],           "en": "steampunk brass and gears" },
+    { "label": "ミリタリー",        "mood": "実用、無骨",           "material": "鋼、ポリマー、迷彩、刻印のみ",         "eras": ["modern","future"],            "en": "utilitarian military" },
+    { "label": "タクティカル",      "mood": "精密、機能的",         "material": "黒いポリマー、レール、滑り止め",       "eras": ["modern"],                     "en": "precise tactical" },
+    { "label": "レトロフューチャー", "mood": "丸み、楽観的",         "material": "クロム、パステル、流線形",             "eras": ["future"],                     "en": "optimistic retro-futuristic" },
+    { "label": "サイバーパンク",    "mood": "無機質、ネオン",       "material": "黒合金、発光ライン、露出した配線",     "eras": ["future"],                     "en": "neon cyberpunk" },
+    { "label": "バイオ・有機",      "mood": "生物的、不気味",       "material": "殻、腱、半透明の膜、脈動する発光",     "eras": ["fantasy","future"],           "en": "organic biomechanical" },
+    { "label": "カートゥーン",      "mood": "明るい、誇張",         "material": "単色面、太い輪郭感、丸い形",           "eras": ["fantasy","modern","future"],  "en": "bright exaggerated cartoon" },
+    { "label": "ローポリ・ゲーム風", "mood": "簡潔、シルエット重視",  "material": "面を少なく、模様は最小限",             "eras": ["fantasy","modern","future"],  "en": "simple silhouette-first game asset" }
+  ],
+  "artStyles": [
+    { "id": "realistic",     "label": "リアル（PBR）", "lock": "realistic physically based materials, natural wear, photographic studio lighting" },
+    { "id": "hand-painted",  "label": "手描き風",     "lock": "stylized hand-painted textures, soft painterly shading, readable shapes" },
+    { "id": "anime-cel",     "label": "アニメ・セル調", "lock": "anime cel-shaded look, clean flat color areas, crisp shape edges" },
+    { "id": "lowpoly",       "label": "ローポリ",     "lock": "low-poly faceted style, flat shading, minimal surface detail" },
+    { "id": "toy",           "label": "フィギュア・玩具風", "lock": "collectible toy figure look, smooth rounded forms, glossy painted plastic" }
+  ],
+  "proportions": [
+    { "id": "chibi",    "label": "2〜3頭身（ちび）", "heads": 2.5, "en": "chibi proportions, about 2.5 heads tall, oversized head" },
+    { "id": "deformed", "label": "4〜5頭身",         "heads": 4.5, "en": "stylized deformed proportions, about 4.5 heads tall" },
+    { "id": "standard", "label": "6〜7頭身",         "heads": 6.5, "en": "standard proportions, about 6.5 heads tall" },
+    { "id": "heroic",   "label": "8頭身（ヒロイック）", "heads": 8,  "en": "heroic proportions, about 8 heads tall" }
+  ]
+}

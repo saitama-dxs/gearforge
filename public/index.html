@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GearForge — 装備精錬所</title>
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body data-page="home">
+<div id="topbar">
+<header>
+  <a class="brand" href="#home" aria-label="GearForge 装備精錬所 ホーム"><span class="brand-mark" aria-hidden="true">⚒</span><div><h1>GearForge</h1><span class="brand-sub">装備精錬所</span></div></a>
+  <div class="engine-label"><strong>for Tripo 3D</strong><span>武器3Dモデル生成ツール</span></div>
+  <div class="proj">
+    <label class="project-label" for="projSel">制作中の一振り</label><select id="projSel" aria-label="プロジェクトを選択"></select>
+    <button id="newProj" class="ghost">＋ 新しい一振り</button>
+  </div>
+</header>
+<div class="work-heading"><a href="#home">← 工房トップへ</a><h2 id="workTitle"></h2><p class="hint">内容を確認して、次の工程へ進めましょう。</p></div>
+<nav id="steps" aria-label="制作の工程"></nav>
+</div>
+<section class="forge-banner" aria-labelledby="forge-title"><div class="forge-copy"><p class="eyebrow">TRIPO 3D GEAR WORKSHOP</p><h2 id="forge-title">画像やアイデアから、武器・防具・アイテムを3Dに。</h2><p>まずは新規作成。参考画像・種別とテイスト・ひとことから始められます。</p><button id="homeNew">＋ 新しい装備を鍛える</button><p class="start-guide">① イメージを伝える <span>→</span> ② 意匠を選ぶ <span>→</span> ③ Tripoで3D生成</p></div><img src="/forge-detailed.png" alt="精緻な彫金が施された鋼の剣、盾、関節式の籠手が並ぶ鍛冶工房"><span class="image-caption">工房のイメージ</span></section>
+<main id="home"><div class="home-heading"><div><h2>制作を続ける</h2><p class="hint">武器を選ぶと、前回の工程から再開します。</p></div></div><p id="projectNotice" role="status"></p><div id="projectList" class="project-list"></div><details class="trash-panel"><summary>ゴミ箱 <span id="trashCount"></span></summary><p class="hint">削除した武器はここから復元できます。画像・3Dモデルも保持されます。</p><div id="trashList"></div></details></main>
+<main id="view"></main>
+<aside id="ask" class="hidden">
+  <h3>エージェントへの依頼文</h3>
+  <p class="hint">コピーして Codex / Claude Code のチャットに貼ってください。作業が終わると画面が自動で切り替わります。</p>
+  <pre id="askText"></pre>
+  <button id="copyBtn">コピー</button>
+  <button id="closeAsk" class="ghost">閉じる</button>
+</aside>
+<footer>
+  <span>炉の燃料（Tripoアカウント）がまだの方 → <a id="tripoLink" href="https://www.tripo3d.ai/" target="_blank" rel="noopener">Tripoに登録</a></span>
+  <details><summary>制作日誌</summary><ul id="log"></ul></details>
+</footer>
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
